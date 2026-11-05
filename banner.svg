@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1410"/><stop offset="0.6" stop-color="#0f2a1e"/><stop offset="1" stop-color="#143a2a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.86" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7cf5a8" stop-opacity="0.45"/><stop offset="1" stop-color="#7cf5a8" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .t1 { fill: #eafff2; font-size: 34px; font-weight: 700; }
+      .t2 { fill: #7cf5a8; font-size: 18px; font-weight: 500; }
+      .t3 { fill: #88c4a4; font-size: 14px; letter-spacing: 1.5px; }
+      .tag { fill: #0a1410; font-size: 13px; font-weight: 700; }
+      .ax { fill: #a8d8bf; font-size: 12px; }
+      .pulse { animation: pu 4s ease-in-out infinite; }
+      @keyframes pu { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+      .spore { animation: ri 6s linear infinite; }
+      @keyframes ri { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .9; } 100% { transform: translateY(-90px); opacity: 0; } }
+    </style>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#glow)"/>
+  <text x="48" y="86" class="t3">BIOLUMINESCENT FUNGI · ENZYME SEQUENCE SCAN</text>
+  <text x="48" y="132" class="t1">Do cold-habitat species glow-genes</text>
+  <text x="48" y="166" class="t2">carry cold-adapted enzyme sequences?</text>
+  <g transform="translate(48,196)">
+    <rect width="150" height="30" rx="15" fill="#7cf5a8"/><text x="75" y="20" text-anchor="middle" class="tag">real UniProt data</text>
+    <rect x="162" width="186" height="30" rx="15" fill="#ffd27f"/><text x="255" y="20" text-anchor="middle" class="tag">Luz · H3H · HispS · CPH</text>
+    <rect x="360" width="200" height="30" rx="15" fill="#c9a94a"/><text x="460" y="20" text-anchor="middle" class="tag">control failed → inconclusive</text>
+  </g>
+  <g transform="translate(636,60)">
+    <rect width="276" height="180" rx="12" fill="#fff" fill-opacity="0.05" stroke="#88c4a4" stroke-opacity="0.35"/>
+    <text x="138" y="24" text-anchor="middle" class="ax">cold-adaptation markers</text>
+    <g class="ax">
+      <text x="18" y="56">↑ Glycine</text><text x="18" y="84">↓ Proline</text>
+      <text x="18" y="112">↓ bulky hydrophobics</text><text x="18" y="140">↓ Arg/(Arg+Lys)</text>
+    </g>
+    <text x="150" y="168" class="ax" style="fill:#7cf5a8">warm vs cool fungi compared</text>
+  </g>
+  <!-- glowing mushroom -->
+  <g transform="translate(1070,150)">
+    <circle class="pulse" cx="0" cy="-20" r="70" fill="#7cf5a8" opacity="0.15"/>
+    <path d="M-48,-18 Q0,-78 48,-18 Q0,-2 -48,-18 Z" fill="#7cf5a8" opacity="0.92"/>
+    <path d="M-10,-14 Q-8,40 -16,78 L16,78 Q8,40 10,-14 Z" fill="#cfeede"/>
+    <ellipse cx="0" cy="-18" rx="48" ry="7" fill="#aef0c8" opacity="0.5"/>
+    <circle class="pulse" cx="-22" cy="-30" r="3" fill="#eafff2"/>
+    <circle class="pulse" cx="18" cy="-26" r="2.5" fill="#eafff2" style="animation-delay:1.2s"/>
+  </g>
+  <g fill="#7cf5a8">
+    <circle class="spore" cx="1030" cy="150" r="2"/><circle class="spore" cx="1110" cy="150" r="1.6" style="animation-delay:2s"/>
+    <circle class="spore" cx="1075" cy="160" r="1.8" style="animation-delay:3.5s"/>
+  </g>
+</svg>
